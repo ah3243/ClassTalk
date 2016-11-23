@@ -1,3 +1,21 @@
 <h1>
   {{title}}
 </h1>
+
+
+<button (click)="logout()">Logout</button>
+<button (click)="login()">Login</button>
+<div>{{ ( af.auth | async)?.uid }}</div>
+
+<h2>This is the list: {{ ( item | async)?.name }}</h2>
+
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+
+    {{item.$value}}
+  </li>
+</ul>
+
+
+<input type="text" #newName placeholder="please enter some text">
+<button (click)="save(newName.value)">Save text</button>
