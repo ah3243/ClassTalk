@@ -18,7 +18,10 @@ export class AppComponent {
   save(name: string) {
     this.items.push(name);
   }
-
+  deleteEverything() {
+      this.items.remove();  
+  }
+    
   logout() {
     this.af.auth.logout();
   }
