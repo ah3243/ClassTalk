@@ -1,0 +1,12 @@
+<p>
+  home works!
+</p>
+
+<!--<button (click)="logout()">Logout</button>
+<button (click)="login()">Login</button>
+<div>{{ ( af.auth | async)?.uid }}</div>-->
+<!--{{ ( item | async)?.name }}-->
+
+<div>
+<p class="text" *ngFor="let item of items | async">{{item.$value}}</p>
+</div>
