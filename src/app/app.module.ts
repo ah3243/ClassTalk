@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { routing } from './routing/app.routing';
 import { TeacherComponent } from './teacher/teacher.component';
+import { SpeechToTextComponent } from './speech-to-text/speech-to-text.component';
 
 export const myFirebaseConfig = {
     apiKey: ***REMOVED***,
@@ -28,7 +29,8 @@ const myFirebaseAuth = {
     AppComponent,
     LoginComponent,
     HomeComponent,
-    TeacherComponent
+    TeacherComponent,
+    SpeechToTextComponent
   ],
   imports: [
     BrowserModule,

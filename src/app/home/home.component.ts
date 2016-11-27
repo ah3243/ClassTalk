@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-home',
@@ -9,26 +9,20 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class HomeComponent implements OnInit {
 
-  items: FirebaseListObservable<any[]>;
+  // items: FirebaseListObservable<any[]>;
+  speech: FirebaseObjectObservable<any[]>;
 
   constructor(public af: AngularFire) { 
-    this.items = af.database.list('/items');
+    // this.items = af.database.list('/items');
+    this.speech = af.database.object('/script');
   }
 
   ngOnInit() {
   }
 
-  save(name: string) {
-    this.items.push(name);
-  }
-  deleteEverything() {
-      this.items.remove();  
+  scrollMe() {
+    window.scrollTo(0,document.body.scrollHeight);
   }
     
-  logout() {
-    this.af.auth.logout();
-  }
-  login() {
-    this.af.auth.login();
-  }
+  
 }
