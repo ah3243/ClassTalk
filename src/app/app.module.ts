@@ -11,12 +11,14 @@ import { routing } from './routing/app.routing';
 import { TeacherComponent } from './teacher/teacher.component';
 import { SpeechToTextComponent } from './speech-to-text/speech-to-text.component';
 
+var apiKeys = require('./apiConfig.json');
+
 export const myFirebaseConfig = {
-    apiKey: ***REMOVED***,
-    authDomain: ***REMOVED***,
-    databaseURL: ***REMOVED***,
-    storageBucket: ***REMOVED***,
-    messagingSenderId: ***REMOVED***
+    apiKey: apiKeys.apiKey,
+    authDomain: apiKeys.authDomain,
+    databaseURL: apiKeys.databaseURL,
+    storageBucket: apiKeys.storageBucket,
+    messagingSenderId: apiKeys.messagingSenderId
 };
 
 const myFirebaseAuth = {
